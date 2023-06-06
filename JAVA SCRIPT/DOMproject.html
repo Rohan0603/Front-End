@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="css/style.css"/> -->
+    <title>TO DO list</title>
+    <style>
+        .red {
+            color: red;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>TO DO list</h1>
+    </header>
+
+    <ul>
+        <li>list 1</li>
+    </ul>
+    <input type="text">
+    <script>
+        var ip = document.getElementsByTagName('input');
+        var li = document.createElement('li');
+        var ul = document.getElementsByTagName('ul');
+
+        ul[0].innerHTML = '';
+        document.addEventListener('keydown', function () {
+            if (event.keyCode === 13) {
+                var newpoint = document.createElement('li')
+                ul[0].appendChild(newpoint)
+                newpoint.textContent = ip[0].value;
+                ip[0].value = '';
+            }
+        })
+
+        document.addEventListener('click', function (event) {
+
+            if (event.target.tagName === 'LI') {
+                if (event.target.classList.contains('red')) {
+                    ul[0].removeChild(event.target);
+                }
+                else {
+                    event.target.classList.toggle('red');
+                }
+            }
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>

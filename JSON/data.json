@@ -1,0 +1,100 @@
+{
+    "people": [
+        {
+            "firstName": "John",
+            "lastName": "Smith",
+            "age": 25,
+            "address": {
+                "streetAddress": "2nd stree",
+                "city": "New York",
+                "state": "NY",
+                "postalCode": "10021"
+            },
+            "phoneNumber": [
+                {
+                    "type": "home",
+                    "number": "212 555-1234"
+                },
+                {
+                    "type": "fax",
+                    "number": "646 555-4567"
+                }
+            ],
+            "gender": {
+                "type": "male"
+            }
+        },
+        {
+            "firstName": "Jorohn",
+            "lastName": "pon",
+            "age": 25,
+            "address": {
+                "streetAddress": "2nd stree",
+                "city": "Mysore York",
+                "state": "NY",
+                "postalCode": "10021"
+            },
+            "phoneNumber": [
+                {
+                    "type": "home",
+                    "number": "212 555-1234"
+                },
+                {
+                    "type": "fax",
+                    "number": "646 555-4567"
+                }
+            ],
+            "gender": {
+                "type": "male"
+            }
+        },
+        {
+            "firstName": "goku",
+            "lastName": "Smith",
+            "age": 25,
+            "address": {
+                "streetAddress": "2nd stree",
+                "city": "mexico York",
+                "state": "MX",
+                "postalCode": "10021"
+            },
+            "phoneNumber": [
+                {
+                    "type": "home",
+                    "number": "212 555-1234"
+                },
+                {
+                    "type": "fax",
+                    "number": "646 555-4567"
+                }
+            ],
+            "gender": {
+                "type": "male"
+            }
+        },
+        {
+            "firstName": "Sony",
+            "lastName": "KJ",
+            "age": 25,
+            "address": {
+                "streetAddress": "2nd stree",
+                "city": "manglore York",
+                "state": "MY",
+                "postalCode": "10021"
+            },
+            "phoneNumber": [
+                {
+                    "type": "home",
+                    "number": "212 555-1234"
+                },
+                {
+                    "type": "fax",
+                    "number": "646 555-4567"
+                }
+            ],
+            "gender": {
+                "type": "female"
+            }
+        }
+    ]
+}

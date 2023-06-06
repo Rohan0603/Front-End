@@ -1,0 +1,186 @@
+Online Auction System Application is Spring boot RESTful application with MySQL, where it allows the sellers to Manage Products, Customers can place a bid on the products before the last date of the bidding.
+Following is the requirement specifications: 
+Online Auction System Modules
+1) Seller 
+2) Customer  
+Seller Module Functionalities 
+1) Register Itself 
+2) Can add a new product based on predefined categories
+3) Can delete a product 
+4) Get Seller by id 
+5) Fetch all registered sellers 
+6) Delete an existing Seller 
+7) Can View details of bids placed on a particular product 
+8) Can view list of all products added for selling                                                         
+Customer Module Functionalities
+1) Customer can register itself 
+2) Customer can update its information 
+3) Get customer by Id 
+4) Fetch all registered customers 
+5) Get All the Products6Get the product by id 
+7) Can view all product placed for bidding based on category 
+8) Customer can Place a bid on specific product 
+9) Customer can view the all bids placed on a product (only after last date)
+
+this is the file structure:
+Backend
+
+ src/main
+
+  java/com/iiht/training/auction
+
+   > controller
+
+    CustomerController.java
+
+    ProductController.java
+
+    SellerController.java
+
+   > dto
+
+    BidsDto.java
+
+    CustomerDto.java
+
+     ProductDto.java
+
+     SellerDto.java
+
+   > entity
+
+    BidsEntity.java
+
+    CustomerEntity.java
+
+    ProductEntity.java
+
+    SellerEntity.java
+
+   > exceptions
+
+    CustomerNotFoundException.java
+
+    GlobalExceptionHandler.java
+
+    InvalidDataException.java
+
+    ProductNotFoundException.java
+
+    SellerNotFoundException.java
+
+   > model
+    CustomerNotFoundException.java
+    GlobalExceptionHandler.java 
+    InvalidDataException.java
+    ProductNotFoundException.java
+    SellerNotFoundException.java
+
+   > model
+    exception
+     ExceptionResponse.java
+
+   > repository
+
+    Bids Repository.java
+
+    CustomerRepository.java
+
+    ProductRepository.java
+
+    SellerRepository.java
+Based on the provided project file structure, it seems like you have organized your backend code following a standard package structure. Here's an overview of the structure and the purpose of each package and file:
+
+com.iiht.training.auction.controller:
+
+CustomerController.java: Contains RESTful API endpoints related to customer functionalities.
+ProductController.java: Contains RESTful API endpoints related to product functionalities.
+SellerController.java: Contains RESTful API endpoints related to seller functionalities.
+com.iiht.training.auction.dto:
+
+BidsDto.java: Data transfer object (DTO) for bids.
+CustomerDto.java: DTO for customer data.
+ProductDto.java: DTO for product data.
+SellerDto.java: DTO for seller data.
+com.iiht.training.auction.entity:
+
+BidsEntity.java: Entity class for bids.
+CustomerEntity.java: Entity class for customers.
+ProductEntity.java: Entity class for products.
+SellerEntity.java: Entity class for sellers.
+com.iiht.training.auction.exceptions:
+
+CustomerNotFoundException.java: Custom exception class for customer not found.
+GlobalExceptionHandler.java: Exception handler for handling global exceptions.
+InvalidDataException.java: Custom exception class for invalid data.
+ProductNotFoundException.java: Custom exception class for product not found.
+SellerNotFoundException.java: Custom exception class for seller not found.
+com.iiht.training.auction.model.exception:
+
+ExceptionResponse.java: Model class for representing exception responses.
+com.iiht.training.auction.repository:
+
+BidsRepository.java: Repository interface for managing bids data.
+CustomerRepository.java: Repository interface for managing customer data.
+ProductRepository.java: Repository interface for managing product data.
+SellerRepository.java: Repository interface for managing seller data.
+Please note that the project structure you provided is focused on the backend code, and the frontend (Angular) code is not included in this structure. In a full-stack application, you would typically have a separate folder or project for the frontend codebase.
+
+Remember to continue implementing the remaining functionalities, such as bid placement and viewing, as per your project requirements. Also, make sure to configure the necessary dependencies, database connection details, and mapping for your Spring Boot application to run smoothly.
+
+
+
+
+
+
+
+
+SELLER CONSTRAINTS:
+●While deleting the seller details, if sellerId does not exist then the operation should throw a customexception.
+●While fetching the Seller details by id, if sellerId does not exist then the operation should throw a customexception.
+●While fetching the Product details by id, if productId does not exist then the operation should throw a customexception.
+●While deleting the Product details, if productId does not exist then operation should throw customexception
+
+CUSTOMER CONSTRAINTS
+●While deleting a customer, if the id does not exist then the operation should throw a custom exception.
+●While fetching the customer details by id, if iddoes not exist then the operation should throw a customexception.
+●While placing a bid if customer , if id does not exist then operation should throw custom exception.
+
+COMMON CONSTRAINTS
+●For all rest endpoints receiving @RequestBody, validation check must be done and must throw custom exception if data isinvalid
+●All the business validations must be implemented in dto classesonly.
+●All the database operations must be implemented on entity objectonly
+●Do not change, add, remove any existing methods in servicelayer
+●In Repository interfaces, custom methods can be added as perrequirements.
+●AllRestEndpointmethodsandExceptionHandlersmustreturndatawrappedinResponseEntity
+
+BUSINESSVALIDATIONS
+●Seller name is not null, min 3 and max 100characters.
+●Seller email is not null, min 3, max 100 characters and should be emailformat
+●Seller address is not null, min 3 and max 100characters.
+●Seller phone number is not null, min 10 and max 10 digitsonly
+●Product name is not null, min 3 and max 100characters.
+●Product description is not null, min 3 and max 100characters.
+●Product quantity is notnull.
+●Product start bidding amount is notnull.
+●Product price is notnull
+●Product last date of bidding is not null, it should be in ‘yyyy-mm-dd’ format and futuredate
+●Product category is not null, min 3 and max 100characters
+●Product predefined categories should be [Mobiles, Electronics, Clothing,Home]
+●Customer username is not null, min 3 and max 100characters
+●Customer password is not null, min 3 and max 100characters
+●Customer email is not null, min 3, max 100 characters and should be emailformat
+●Customer phone number is not null, min 10 and max 10 digitsonly
+●Customer address is not null, min 3 and max 100characters
+
+
+
+SELLER CONTROLLER
+1. /sellers/register
+2. /sellers/update
+3. /sellers/get/all
+4. /sellers/get/{sellerId}
+5. /sellers/delete/{sellerId}
+6. /sellers/get/bids-on-product/{produtId}
+
+PRODUCT CONTROLLER

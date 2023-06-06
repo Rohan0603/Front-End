@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="css/style.css"/> -->
+    <title>Exercise 3</title>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .blue {
+            color: blue;
+        }
+
+        .green {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>My Heading</h1>
+    </header>
+    Home page
+    <section>
+        <p>first para
+            <b>this is bold and</b> <i>this is italic</i>
+        </p>
+        <p>second para</p>
+        <p>third para <br>on a new line using break</p>
+        <aside>just some plaintext</aside>
+        <ul>
+            <li>first item</li>
+            <li>second item</li>
+            <li>third item</li>
+        </ul>
+        <input type="text">
+        <button type="button" id="btn">add to list</button>
+    </section>
+    <script>
+        var ip = document.getElementsByTagName('input');
+        var btn = document.getElementById('btn');
+        var li = document.createElement('li');
+        var ul = document.getElementsByTagName('ul');
+        
+        btn.addEventListener('click', function () {
+            var newpoint = document.createElement('li')
+            ul[0].appendChild(newpoint)
+            newpoint.textContent = ip[0].value;
+            ip[0].value = '';
+        })
+
+        for (var i = 0; i < li.length; i++) {
+            li[i].addEventListener('click', color())
+        }
+        function color() {
+            this.classList.toggle('red');
+        }
+
+    </script>
+    <footer>&copy;Website</footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+table,
+p {
+    color: solid#333;
+    width: auto;
+    background-color: beige;
+}
+
+h1,
+ul {
+    background-color: #dad4e4;
+}
+
+.red {                /* .red is used to select class red */
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.bigFont {
+    font-size: 40px;
+}
+
+#para1{
+    color: green;
+}

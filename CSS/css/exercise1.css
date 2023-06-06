@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(253, 195, 87);
+}
+li{
+    background-color: brown;
+    align-content: center;
+    padding: 10px;
+    display: inline;
+}
+.container1,.container2{
+    background-color: aliceblue;
+}
+footer{
+    background-color: gray;
+}
+#id1{
+    background-color: yellow;
+}
+.center{
+    text-align: center;
+    text-decoration: none;
+}
+#id2{
+    background-color: rgb(244, 130, 74);
+    color: white;
+}

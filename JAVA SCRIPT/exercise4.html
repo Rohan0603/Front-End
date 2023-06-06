@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Java Script</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <input type="number" id="ip">
+    <button type="button" id="myBtn">check</button>
+    <h1></h1>
+    <script>
+        var btn = document.getElementById("myBtn");
+        btn.addEventListener('click', check);
+        function check() {
+            let ip = document.getElementById("ip").value;
+            if(ip%2){
+                document.querySelector("h1").innerHTML = "Odd";
+            }
+            else{
+                document.querySelector("h1").innerHTML = "Even";
+            }
+        }
+    </script>
+</body>
+
+</html>

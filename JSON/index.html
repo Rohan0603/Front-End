@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 2</title>
+</head>
+
+<body>
+    <div id="op1"></div>
+    <div id="op2"></div>
+    <script>
+        /* 
+        var op1=document.getElementById("op1");
+        var op2=document.getElementById("op2");
+        var json={"firstName":"Mike","lastName":"Smith"}
+        op1.innerHTML=json.firstName;
+        op2.innerHTML=json["lastName"];*/
+        var obj = {
+            "people": [
+                {
+                    "firstName": "John",
+                    "lastName": "Smith",
+                    "age": 25,
+                    "address": {
+                        "streetAddress": "2nd stree",
+                        "city": "New York",
+                        "state": "NY",
+                        "postalCode": "10021"
+                    },
+                    "phoneNumber": [
+                        {
+                            "type": "home",
+                            "number": "212 555-1234"
+                        },
+                        {
+                            "type": "fax",
+                            "number": "646 555-4567"
+                        }
+                    ],
+                    "gender": {
+                        "type": "male"
+                    }
+                },
+                {
+                    "firstName": "Jorohn",
+                    "lastName": "pon",
+                    "age": 25,
+                    "address": {
+                        "streetAddress": "2nd stree",
+                        "city": "Mysore York",
+                        "state": "NY",
+                        "postalCode": "10021"
+                    },
+                    "phoneNumber": [
+                        {
+                            "type": "home",
+                            "number": "212 555-1234"
+                        },
+                        {
+                            "type": "fax",
+                            "number": "646 555-4567"
+                        }
+                    ],
+                    "gender": {
+                        "type": "male"
+                    }
+                },
+                {
+                    "firstName": "goku",
+                    "lastName": "Smith",
+                    "age": 25,
+                    "address": {
+                        "streetAddress": "2nd stree",
+                        "city": "mexico York",
+                        "state": "MX",
+                        "postalCode": "10021"
+                    },
+                    "phoneNumber": [
+                        {
+                            "type": "home",
+                            "number": "212 555-1234"
+                        },
+                        {
+                            "type": "fax",
+                            "number": "646 555-4567"
+                        }
+                    ],
+                    "gender": {
+                        "type": "male"
+                    }
+                },
+                {
+                    "firstName": "Sony",
+                    "lastName": "KJ",
+                    "age": 25,
+                    "address": {
+                        "streetAddress": "2nd stree",
+                        "city": "manglore York",
+                        "state": "MY",
+                        "postalCode": "10021"
+                    },
+                    "phoneNumber": [
+                        {
+                            "type": "home",
+                            "number": "212 555-1234"
+                        },
+                        {
+                            "type": "fax",
+                            "number": "646 555-4567"
+                        }
+                    ],
+                    "gender": {
+                        "type": "female"
+                    }
+                }
+            ]
+        }
+        /* looping obj array
+        var op1 = document.getElementById("op1");
+        var op2 = document.getElementById("op2");
+        for (let i = 0; i < obj.people.length; i++) {
+            var first = obj.people[i].firstName;
+            var last = obj.people[i].lastName;
+            console.log(first)
+            console.log(last)
+        }
+        */
+        /* adding new obj values to the obj using JS
+        var temp = {
+             "firstName": "Jimmay",
+             "lastName": "KJ",
+             "age": 25,
+             "address": {
+                 "streetAddress": "2nd stree",
+                 "city": "manglore York",
+                 "state": "MY",
+                 "postalCode": "10021"
+             },
+             "phoneNumber": [
+                 {
+                     "type": "home",
+                     "number": "212 555-1234"
+                 },
+                 {
+                     "type": "fax",
+                     "number": "646 555-4567"
+                 }
+             ],
+             "gender": {
+                 "type": "male"
+             }
+         }
+         obj.people.push(trmp)
+         */
+
+        /* local storage
+        var str1=JSON.stringify(obj);
+        localStorage.setItem("test",str1);
+        var str2=localStorage.getItem("test");
+        var obj2=JSON.parse(str2);
+        console.log(obj2);
+        */
+
+        /* fetch()
+        const url = "https://randomuser.me/api/"
+        fetch(url).then(function (res) {
+            return res.json()
+        }).then(function(data){
+            console.log(data);
+        })
+        */ 
+
+        /* catching errors and short hand and iterate through multiple result
+        const url = "https://randomuser.me/api/?results=5"
+        fetch(url).then(res => {
+            return res.json()
+        }).then(data => {
+            console.log(data);                     
+            data.results.forEach(element => {          // iterate through multiple results
+                console.log(element);
+            });
+        }).catch(error =>{
+            console.log(error);
+        })
+        */
+
+
+    </script>
+</body>
+
+</html>
